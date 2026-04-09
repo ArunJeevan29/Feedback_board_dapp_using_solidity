@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A decentralized application for submitting open feedback to the blockchain.">
+    <title>Feedback Board DApp</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <main class="container">
+        <header>
+            <h1>📝 <span class="gradient-text">Feedback Board</span></h1>
+        </header>
+
+        <section class="wallet-section">
+            <button id="connect" type="button">
+                <span>🔌 Connect Wallet</span>
+            </button>
+            <div id="connectedaddress">
+                <span id="wallet-status">Status: Disconnected</span> |
+                <span id="walletaddress"></span>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <textarea id="feedbackInput" placeholder="Share your thoughts with the community..."></textarea>
+            <button id="submitBtn" type="button">
+                <span class="btn-text">🚀 Submit Feedback</span>
+                <span class="spinner" id="submitLoader" style="display: none;"></span>
+            </button>
+        </section>
+
+        <section class="feedbacks-section">
+            <h3 id="feedbackheading">📋 Community Feedback</h3>
+            <div id="allFeedbacks">
+                <!-- Feedbacks will be injected here via app.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
